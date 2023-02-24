@@ -1,0 +1,75 @@
+*{margin: 0; padding: 0;}
+
+body{
+    /* font-family: arial, helvetica, sans-serif; */
+    /* font-size: 12px; */
+    }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #000;
+    
+}
+
+header li{
+    display: inline;
+    /* border-bottom:3px solid #EDEDED;  */
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+}
+
+
+header ul li a {
+    color: #fff;
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+header li:hover { 
+    /* background-color:#D6D6D6; */
+    color: #6D6D6D;
+    border-bottom:3px solid #EA0000;
+}
+
+
+main h1,h2{
+    text-align: center;
+}
+
+
+main .listagemFilmes{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    grid-gap: 1rem ;
+    
+    
+}
+
+main ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+
+main .filme1{
+    border: solid 1px #000;
+    text-decoration: none;
+}
+
+main .filme2{
+    border: solid 1px #000;
+    text-decoration: none;
+}
+
+main .filme3{
+    border: solid 1px #000;
+    text-decoration: none;
+}
+
+
