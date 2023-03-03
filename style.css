@@ -119,16 +119,67 @@ main h1,h2{
 
 
 
-
+main{
+    background-color: #141414;
+    color: #fff;
+    
+}
 
 .listagemFilmes{
     display: flex;
     justify-content: center;
     padding: 3rem;
     grid-gap: 1rem ;
+
     
     
 }
+
+
+
+/* MID SECTION */
+.mid {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    padding: 40px;
+}
+
+.mid .content-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+
+
+.listaTeste li{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 main ul {
     list-style: none;
