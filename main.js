@@ -12,6 +12,7 @@ let localizarFilme = localizaFilme()
 
 
 
+
 let filmes = {
     nome: 'Sherek 2',
     generos: ['Filmes para a familia',  'Filmes baseados em livros', 'Filmes para toda a familia'],
