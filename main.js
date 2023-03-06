@@ -10,6 +10,7 @@ let localizarFilme = localizaFilme()
 
 
 // Listagem dos filmes
+//Array de objetos
 let filmes = [
     { 
     id: 1,
