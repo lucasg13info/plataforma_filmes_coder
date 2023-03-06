@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
-    <title>Plataforma de filmes</title>
+    <title>JS-Flix</title>
     <script src="main.js"></script>
 </head>
 <body>
@@ -14,8 +14,6 @@
         <div>
             <img src="#" alt="Logo">
         </div>
-        
-
         <div>
             <ul>
                 <li><a href="#">Início</a></li>
@@ -24,18 +22,37 @@
                 <li><a href="#">Minha lita de filmes</a></li>
             </ul>
         </div>
-
-
         <div id="divBusca">
             <input type="text" id="txtBuscaFilme" placeholder="Buscar filme"/>
             <img src="#" id="btnBuscaFilme" alt="Buscar filme"/>
         </div>
     </header>
     
+    
     <main>
-        <h1>Plataforma de filmes online</h1>
+        <div class="destaque">
+            <div class="imagem-container">
+            <div class="texto-esquera">
+                <h1>Prometheus</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut assumenda optio provident labore delectus nam eius veniam reprehenderit error, officiis suscipit aperiam accusantium.</p>
+                <!-- <button></button> -->
+                <div class="botaoPlay">
+                    <h3>Play</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="degrade"></div>
+        
+        <section class="titulos">
+            <h1>Plataforma de filmes online</h1>
+            <h2>Filmes em alta</h2>
+        </section>
 
-        <h2>Filmes em alta</h2>
+
+
+
+
         
         <div class="listagemFilmes">
             <div class="filme1">
@@ -80,10 +97,17 @@
 
             
 
-
+            
         </div>
         <!-- <h2>Filmes adicionados recentemente</h2> -->
+
+        
     </main>
+
+
+    <ul id="lista" class="listaTeste">
+        <p>teste</p>
+    </ul>
 
     
     <footer></footer>
