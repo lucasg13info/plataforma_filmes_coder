@@ -1,9 +1,7 @@
-*{margin: 0; padding: 0;}
-
 body{
-    /* font-family: arial, helvetica, sans-serif; */
-    /* font-size: 12px; */
-    }
+    padding: 0;
+    margin: 0;
+}
 
 header{
     display: flex;
@@ -39,10 +37,95 @@ header li:hover {
 
 main h1,h2{
     text-align: center;
+
 }
 
 
-main .listagemFilmes{
+.destaque{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.wallhere.com%2Fphotos%2Fe7%2F4e%2Fspace_stars_floating_depth_of_field_astronaut-160957.png!d&f=1&nofb=1&ipt=fd92595af556858d7368a15b121720cb9aa480824f0f26ea0126a5fc496821bc&ipo=images");
+    /* background-image: url("./img/"); */
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    /* background-image: url("//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhdwallpaperim.com%2Fwp-content%2Fuploads%2F2017%2F08%2F24%2F107270-Interstellar_movie.jpg&f=1&nofb=1"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.destaque .imagem-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.texto-esquera{
+    width: 40%;
+    height: 80%;
+    padding-left: 3%;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.destaque h1 {
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600px;
+    font-size: 85px;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+}
+
+.destaque p {
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    padding: 25px 0px;
+}
+
+.destaque h3{
+    font-family: "Roboto", sans-serif;
+    width: 20%;
+    padding: 1rem;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(44, 212, 103);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.degrade{
+    background: rgb(20, 20, 20);
+    background: linear-gradient(0deg,
+            rgba(20, 20, 20, 1) 0%,
+            rgba(255, 255, 255, 0) 36%);
+}
+
+
+
+
+
+main{
+    background-color: #141414;
+    color: #fff;
+    
+}
+
+.listagemFilmes{
     display: flex;
     justify-content: center;
     padding: 3rem;
@@ -50,6 +133,52 @@ main .listagemFilmes{
     
     
 }
+
+
+
+/* MID SECTION */
+.mid {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    padding: 40px;
+}
+
+.mid .content-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+
+
+.listaTeste li{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 main ul {
     list-style: none;
