@@ -103,8 +103,3 @@ let filmes = [
     let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
     document.getElementById('lista').innerHTML = 
     lista.map(item=>`<p>${item}</p>`).join('')       
-
-
-    // lista.forEach(function(item){
-    //     console.log(item)
-    // });
