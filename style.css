@@ -35,7 +35,7 @@ header li:hover {
 }
 
 
-main h1,h2{
+main h1{
     text-align: center;
 
 }
@@ -104,17 +104,12 @@ main h1,h2{
 
 
 
-
-
-
-
 .degrade{
     background: rgb(20, 20, 20);
     background: linear-gradient(0deg,
             rgba(20, 20, 20, 1) 0%,
             rgba(255, 255, 255, 0) 36%);
 }
-
 
 
 
@@ -158,47 +153,57 @@ main{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-main ul {
-    list-style: none;
-    padding: 1rem;
+.titulo_categoria{
+    margin: 3rem 0 1rem 6.3rem ;
 }
 
 
-main .filme1{
-    border: solid 1px #000;
-    text-decoration: none;
+/*--------------------
+filmes
+--------------------*/
+.filmes {
+    display: flex;
+    padding: 8px 18px;
+    justify-content: space-around;
+    margin: 0 5rem 0 5rem;
+    
 }
 
-main .filme2{
-    border: solid 1px #000;
-    text-decoration: none;
+.movie {
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+  /* flex-wrap: wrap;
+    width: 20%;  */
+  
 }
+  
+.poster {
+  width: 95%;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}  
 
-main .filme3{
-    border: solid 1px #000;
-    text-decoration: none;
+.poster:hover {
+    -webkit-transform: scale(1.10);
+    transform: scale(1.3);
+    transition: transform .5s ease;
+ }
+
+  
+.nome_filme {
+  /* text-transform: uppercase; */
+  color: #525661;
+  margin-bottom: 4px;
+  font-size: 16px;
 }
-
-
+  
+.info {
+  font-size: 11px;
+  opacity: .8;
+}
+  
+.desc {
+  display: none;
+}
+  
