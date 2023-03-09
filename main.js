@@ -73,7 +73,7 @@ let filmes = [
         lancamento: "15 de junho de 2012",
         capa: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fleiturafilmica.com.br%2Fprometheus%2F&psig=AOvVaw0zMmOcN0We-m_BL3kQSdzf&ust=1677939054660000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOCu_pv4v_0CFQAAAAAdAAAAABAH"
     }
-]
+    ]
     //Convert to json:
     // const emJSON = JSON.stringify(filmes);
     // console.log(emJSON)
@@ -94,6 +94,27 @@ let filmes = [
     }
 
 
+
+    //Fincionalidades:
+    function listaFavoritos(){
+
+    }
+
+    function retirarFilmeFavoritos(){
+
+    }
+
+    function pesquisarFilme(){
+
+    }
+
+    function sugestaoFilmes(){
+
+    }
+
+    function modalFilmes(){
+        
+    }
 
 
 
