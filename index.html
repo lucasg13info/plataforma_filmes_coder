@@ -44,13 +44,26 @@
         </div>
         <!-- <div class="degrade"></div> -->
         
+        
+        
+        
+        <!-- Modal -->
+        <dialog >
+          <h2>Teste modal</h2>
+          <h2>Filmes em alta</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa commodi accusantium, laboriosam unde quaerat omnis fugiat dicta dolores in dolorum, blanditiis cumque cupiditate inventore doloremque, debitis ratione reprehenderit soluta illo?</p>
+          <button id="fecharModal">Close Modal</button>
+        </dialog>
+
+
+
   
         <!-- FILMES ALTA -->
         <div class="app_filmes_em_alta">
             <h2 class="titulo_categoria">Filmes em alta</h2>
             <section class="filmes">
               <div class="filme">
-                <img src="https://github.com/supahfunk/supah-codepen/blob/master/movie-room.jpg?raw=true" alt="" class="poster" />
+                <img id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-room.jpg?raw=true" alt="" class="poster" />
                 <div class="nome_filme">Room</div>
                 <div class="info">
                   <span class="duracao">117 min</span>
@@ -61,8 +74,8 @@
                 </div>
               </div>
               <div class="filme">
-                <img src="https://github.com/supahfunk/supah-codepen/blob/master/movie-whiplash.jpg?raw=true" alt="" class="poster" />
-                <div class="nome_filme">Whiplash</div>
+                <img id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-whiplash.jpg?raw=true" alt="" class="poster" />
+                <div class="nome_filme">1Whiplash</div>
                 <div class="info">
                   <span class="duracao">167 min</span>
                   <span class="ano">2015</span>
@@ -72,7 +85,7 @@
                 </div>
               </div>
               <div class="filme">
-                <img src="https://github.com/supahfunk/supah-codepen/blob/master/movie-madmax.jpg?raw=true" alt="" class="poster" />
+                <img id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-madmax.jpg?raw=true" alt="" class="poster" />
                 <div class="nome_filme">Mad Max</div>
                 <div class="info">
                   <span class="duracao">120 min</span>
@@ -117,6 +130,7 @@
               </div>       
               </div>
             </div>
+            
           </div>
 
         <!-- FILMES FAVORITOS -->
@@ -378,6 +392,7 @@
     
     <footer></footer>
 
-    <script src="main.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/modal.js"></script>
 </body>
 </html>
