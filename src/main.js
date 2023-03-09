@@ -80,7 +80,8 @@ let filmes = [
         document.body.appendChild(caixa)
     }
 
-
+    let procurarFilme = prompt("Digite aqui o filme que vc deseja procurar");
+    pesquisarFilme(procurarFilme);
 
     //Fincionalidades:
     function listaFavoritos(){
@@ -92,7 +93,15 @@ let filmes = [
     }
 
     function pesquisarFilme(){
+        let acharFilmes = filmes.find ((filme) => {
+            return filme.nomeFilme === procurarFilme;
+        })
 
+        if(acharFilmes){
+            alert(`Filme ${procurarFilme} encontrado`);
+        } else {
+            alert("Filme não encontrado");
+        }
     }
 
     function sugestaoFilmes(){
