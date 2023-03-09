@@ -94,6 +94,8 @@ let filmes = [
 
 
 
+
+    //Listando o array de objetos
     for(const filme of filmes){
          let caixa = document.createElement("section")
         //let caixa = document.getElementById("img_da_certo")
@@ -110,7 +112,9 @@ let filmes = [
     let procurarFilme = prompt("Digite aqui o filme que vc deseja procurar");
     pesquisarFilme(procurarFilme);
 
-    //Fincionalidades:
+    
+    
+    //Funcionalidades:
     function listaFavoritos(){
 
     }
