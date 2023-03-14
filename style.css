@@ -13,7 +13,9 @@ header{
 }
 
 .header__logo {
-    height: 75px;
+    /* height: 75px; */
+    width: 4rem;
+    margin: 1rem 0 0 1rem;
 }
 
 header li{
@@ -26,7 +28,7 @@ header li{
 
 
 header ul li a {
-    font-size: 30px;
+    font-size: 1.5rem;
     color: white;
     padding: 1rem;
     display: inline-block;
@@ -41,8 +43,12 @@ header li a:hover {
     padding: 10px;
     border-radius: 90px;
     color:white;
-    font-size: 35px;
+    font-size: 1.7rem;
 }
+
+input:placeholder-shown {
+    border-color: white;
+  }
 
 #divBusca {
     display: flex;

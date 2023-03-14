@@ -19,13 +19,13 @@
 
         <div>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">|</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">|</a></li>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="#">|</a></li>
-                <li><a href="#">Minha lista</a></li>
+                <li class="item_lista"><a href="#">Início</a></li>
+                <!-- <li><a href="#">|</a></li> -->
+                <li class="item_lista"><a href="#">Séries</a></li>
+                <!-- <li><a href="#">|</a></li> -->
+                <li class="item_lista"><a href="#">Filmes</a></li>
+                <!-- <li><a href="#">|</a></li> -->
+                <li class="item_lista"><a href="#">Minha lista</a></li>
             </ul>
         </div>
 
@@ -71,7 +71,7 @@
             <h2 class="titulo_categoria">Filmes em alta</h2>
             <section class="filmes">
               <div class="filme">
-                <img id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-room.jpg?raw=true" alt="" class="poster" />
+                <img onClick = "selectFilmesModal()" id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-room.jpg?raw=true" alt="" class="poster" />
                 <div class="nome_filme">Room</div>
                 <div class="info">
                   <span class="duracao">117 min</span>
@@ -82,7 +82,7 @@
                 </div>
               </div>
               <div class="filme">
-                <img id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-whiplash.jpg?raw=true" alt="" class="poster" />
+                <img onClick = "selectFilmesModal()" id="abrirModal" src="https://github.com/supahfunk/supah-codepen/blob/master/movie-whiplash.jpg?raw=true" alt="" class="poster" />
                 <div class="nome_filme">1Whiplash</div>
                 <div class="info">
                   <span class="duracao">167 min</span>

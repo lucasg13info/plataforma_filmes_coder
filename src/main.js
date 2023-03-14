@@ -1,4 +1,7 @@
 // Listagem dos filmes
+
+const { TestTube } = require("phosphor-react");
+
 //Array de objetos
 let filmes = [
     { 
@@ -144,6 +147,19 @@ let filmes = [
         return filmes.genero === "Ação"
     })
     console.log(filtroFilmesAcao)
+
+
+    //Modal:
+    function selectFilmesModal(){
+        for (const filme of filmes){
+            let filmeee = filme.nomeFilme
+            console.log(filmeee)
+        }
+        
+    }
+
+
+
 
 
 
