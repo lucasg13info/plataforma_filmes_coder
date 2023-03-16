@@ -1,7 +1,5 @@
 // Listagem dos filmes
 
-const { TestTube } = require("phosphor-react");
-
 //Array de objetos
 let filmes = [
     { 
@@ -11,7 +9,7 @@ let filmes = [
         duracao: "1h 55min",
         sinopse: "Em Tropa de Elite, o dia-a-dia do grupo de policiais e de um capitão do BOPE (Wagner Moura), que quer deixar a corporação e tenta encontrar um substituto para seu posto. Paralelamente dois amigos de infância se tornam policiais e se destacam pela honestidade e honra ao realizar suas funções, se indignando com a corrupção existente no batalhão em que atuam.",
         lancamento: "05 de Outubro de 2007",
-        capa: "https://upload.wikimedia.org/wikipedia/pt/2/2a/TropaDeElitePoster.jpg"
+        capa: "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/87/22/38/19873277.jpg"
     
     },
     { 
@@ -27,7 +25,7 @@ let filmes = [
     { 
         id: 2,
         nomeFilme: "Meniono Maluquinho 2 - A aventura", 
-        genero: "kids", 
+        genero: "Kids", 
         duracao: "1h 35min",
         sinopse: "As aventuras dos nordestinos João Grilo (Matheus Natchergaele), um sertanejo pobre e mentiroso, e Chicó (Selton Mello), o mais covarde dos homens. Ambos lutam pelo pão de cada dia e atravessam por vários episódios enganando a todos do pequeno vilarejo de Taperoá, no sertão da Paraíba. A salvação da dupla acontece com a aparição da Nossa Senhora (Fernanda Montenegro). Adaptação da obra de Ariano Suassuna..",
         lancamento: "10 de Setembro de 2000",
@@ -80,7 +78,7 @@ let filmes = [
         sinopse: "Após dois anos desde o surgimento do Batman (Christian Bale), os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon (Gary Oldman) e do promotor público Harvey Dent (Aaron Eckhart), Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa ",
         lancamento: "11 de abril de 2019",
         capa: "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/86/98/32/19870786.jpg"
-    },
+        },
     { 
         id: 8,
         nomeFilme: "CREED", 
@@ -97,23 +95,58 @@ let filmes = [
 
 
 
+    // Filtro filmes de ação Lucas:
+        const filtroFilmesAcao = filmes.filter((filmes)=>{
+            return filmes.genero === "Ação"
+        })
+        console.log(filtroFilmesAcao)
 
-    //Listando o array de objetos
-    for(const filme of filmes){
-         let caixa = document.createElement("section")
-        //let caixa = document.getElementById("img_da_certo")
-        //console.log(filme)
-        caixa.innerHTML = `<p>${filme.nomeFilme}</p>
-                           <p>${filme.genero}</p>
-                           <img src='${filme.capa}'</p>`
-                            //    <span class="duracao">$(filme.duracao)</span>;
-                            //document.getElementById('cardTitle').innerHTML = filme
+    
+    // Filtro filmes de brasileiros Lucas:
+        const filtroFilmesBrasileiros = filmes.filter((filmes)=>{
+            return filmes.genero === "brasileiro"
+        })
+        console.log(filtroFilmesBrasileiros)
+
+
+    // Filtro filmes de kids Lucas:
+        const filtroFilmesKids = filmes.filter((filmes)=>{
+            return filmes.genero === "Kids"
+        })
+        console.log(filtroFilmesKids)
+
+
+
+    // Criando a lista de filmes com HTML Lucas:
+    for (let filme of filtroFilmesAcao){
+        let caixa = document.getElementById("fil")
+        caixa.innerHTML += 
+    
+      ` <div class="filmes_em_alta">
+          <div class="lisgemFilmes">
+            <div class="filmeIndividual">
+              <img class= "posterFilme"src="${filme.capa}" alt="">
+              <div class="dadosFilme">
+                <h3 class="nomeFilme">${filme.nomeFilme}</h3>
+                <h4>${filme.duracao}</h4>
+              </div>
+            </div>
+          </div>
+        </div>   
+              ` 
+
+
         
-        document.body.appendChild(caixa)
-    }
 
-    let procurarFilme = prompt("Digite aqui o filme que vc deseja procurar");
-    pesquisarFilme(procurarFilme);
+    
+                        }
+
+
+
+
+    
+    // let procurarFilme = prompt("Digite aqui o filme que vc deseja procurar");
+    // pesquisarFilme(procurarFilme);
 
     
     
@@ -143,10 +176,7 @@ let filmes = [
     }
     
 
-    const filtroFilmesAcao = filmes.filter((filmes)=>{
-        return filmes.genero === "Ação"
-    })
-    console.log(filtroFilmesAcao)
+    
 
 
     //Modal:
@@ -166,6 +196,6 @@ let filmes = [
    
 
     // Listagem itens Array:
-    let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
-    document.getElementById('lista').innerHTML = 
-    lista.map(item=>`<p>${item}</p>`).join('')       
+    // let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
+    // document.getElementById('lista').innerHTML = 
+    // lista.map(item=>`<p>${item}</p>`).join('')       
