@@ -46,6 +46,11 @@ header li a:hover {
     font-size: 1.7rem;
 }
 
+
+.btn_play:hover{
+    background-color: rgb(13, 181, 91);
+}
+
 input:placeholder-shown {
     border-color: white;
   }
@@ -81,12 +86,7 @@ input:placeholder-shown {
 
 main h1{
     text-align: center;
-    
-
 }
-
-
-
 
 .destaque{
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.wallhere.com%2Fphotos%2Fe7%2F4e%2Fspace_stars_floating_depth_of_field_astronaut-160957.png!d&f=1&nofb=1&ipt=fd92595af556858d7368a15b121720cb9aa480824f0f26ea0126a5fc496821bc&ipo=images");
@@ -99,6 +99,7 @@ main h1{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .destaque .imagem-container{
     width: 100%;
     height: 100%;
@@ -150,15 +151,12 @@ main h1{
 }
 
 
-
 .degrade{
     background: rgb(20, 20, 20);
     background: linear-gradient(0deg,
             rgba(20, 20, 20, 1) 0%,
             rgba(255, 255, 255, 0) 36%);
 }
-
-
 
 
 main{
@@ -186,13 +184,6 @@ main{
     /* background-image: linear-gradient( to right, black, rgb(19, 12, 12),rgb(27, 27, 23), rgb(2, 2, 17) ); */
      background-image: linear-gradient(45deg, rgb(0, 0, 0) 50%, rgb(14, 32, 43) 100%);
 }
-
-/* .mid .content-area {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-} */
 
 
 .listaTeste li{
@@ -256,39 +247,3 @@ filmes
   
 
 
-
-
-
-/* CSS Lucas filmes */
-
-.filmes_em_alta{
-    display: flex;
-    width: 95%;
-}
-
-
-.lisgemFilmes {
-    padding: 5px 15px;
-    justify-content: space-around;
-    margin: 0 5rem 0 5rem;
-    
-}
-
-.posterFilme {
-    width: 100%;
-    margin-bottom: 6px;
-    border-radius: 4px;
-  }  
-
-
-.posterFilme:hover{
-    -webkit-transform: scale(1.10);
-    transform: scale(1.3);
-    transition: transform .5s ease;
-}
-.nomeFilme{
-    /* text-transform: uppercase; */
-    color: #525661;
-    margin-bottom: 4px;
-    font-size: 16px;
-  }
