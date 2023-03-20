@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 header{
@@ -9,7 +12,6 @@ header{
     padding: 0.2rem;
     background-color: #141414;
     border-bottom: 5px solid #8B0D32;
-    
 }
 
 .header__logo {
@@ -23,7 +25,6 @@ header li{
     /* border-bottom:3px solid #EDEDED;  */
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        
 }
 
 
@@ -51,15 +52,18 @@ header li a:hover {
     background-color: rgb(13, 181, 91);
 }
 
+
 input:placeholder-shown {
     border-color: white;
-  }
+}
+
 
 #divBusca {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 #txtBuscaFilme {
     height: 27px;
@@ -72,27 +76,28 @@ input:placeholder-shown {
     padding-left: 10px;
 }
 
+
 #btnBuscaFilme {
     padding-left: 10px;
 }
 
-.mid {
-    display: flex;
-    flex-direction: column;
-    background-color: #141414;
-    padding: 40px;
-}
 
 
 main h1{
     text-align: center;
 }
 
+
 .destaque{
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.wallhere.com%2Fphotos%2Fe7%2F4e%2Fspace_stars_floating_depth_of_field_astronaut-160957.png!d&f=1&nofb=1&ipt=fd92595af556858d7368a15b121720cb9aa480824f0f26ea0126a5fc496821bc&ipo=images");
     /* background-image: url("./img/"); */
+    /* background-image: linear-gradient(to top, rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%); */
+
+    /* opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65); */
     width: 100%;
-    min-height: 550px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     /* background-image: url("//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhdwallpaperim.com%2Fwp-content%2Fuploads%2F2017%2F08%2F24%2F107270-Interstellar_movie.jpg&f=1&nofb=1"); */
@@ -100,12 +105,29 @@ main h1{
     background-size: cover;
 }
 
+.PlayFilmeDestaque{
+    background-color: green;
+    color: white;
+
+    width: 12rem;
+    height: 3rem;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+.PlayFilmeDestaque:hover{
+    background-color: rgb(9, 187, 9);
+
+}
 .destaque .imagem-container{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    
 }
 
 
@@ -128,6 +150,7 @@ main h1{
     text-shadow: 5px 5px 10px black;
 }
 
+
 .destaque p {
     margin: 0px;
     font-family: "Montserrat", sans-serif;
@@ -137,6 +160,7 @@ main h1{
     text-shadow: 2px 2px 1px black;
     padding: 25px 0px;
 }
+
 
 .destaque h3{
     font-family: "Roboto", sans-serif;
@@ -166,23 +190,12 @@ main{
     
 }
 
+
 .listagemFilmes{
     display: flex;
     justify-content: center;
     padding: 3rem;
     grid-gap: 1rem ;
-    
-    
-}
-
-
-
-/* MID SECTION */
-.mid {
-     /* background-color: #141414; */
-    padding: 40px;
-    /* background-image: linear-gradient( to right, black, rgb(19, 12, 12),rgb(27, 27, 23), rgb(2, 2, 17) ); */
-     background-image: linear-gradient(45deg, rgb(0, 0, 0) 50%, rgb(14, 32, 43) 100%);
 }
 
 
@@ -196,6 +209,8 @@ main{
 }
 
 
+
+
 /*--------------------
 filmes
 --------------------*/
@@ -204,8 +219,8 @@ filmes
     padding: 8px 18px;
     justify-content: space-around;
     margin: 0 5rem 0 5rem;
-    
 }
+
 
 .movie {
   padding: 10px;
@@ -213,37 +228,153 @@ filmes
   cursor: pointer;
   /* flex-wrap: wrap;
     width: 20%;  */
-  
 }
-  
+
+
 .poster {
   width: 95%;
   margin-bottom: 6px;
   border-radius: 4px;
 }  
 
+
 .poster:hover {
     -webkit-transform: scale(1.10);
     transform: scale(1.3);
     transition: transform .5s ease;
- }
+}
 
   
 .nome_filme {
   /* text-transform: uppercase; */
   color: #525661;
   margin-bottom: 4px;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: bold;
 }
+
+.nome_filme:hover {
+    color: #85878b;
+  }
   
+
 .info {
   font-size: 11px;
   opacity: .8;
 }
+
   
 .desc {
   display: none;
 }
+
+
+
+.botaoPlay{
+    display: none;
+    width: 2rem;
+}
   
 
+/* MODAL */
+.containerModal{
+    padding: 0;
+    border: 1px;
+
+    width: 40rem;
+    /* height: 35rem; */
+
+    background-color: #272424;
+    color: white;
+
+    border-radius: 10px;    
+}
+
+.containerModal h2{
+    text-align: center;
+}
+
+.nomeFilmeModal{
+    margin: -40px 0px 20px 0px;
+}
+
+.containerModal .playFilme{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+
+    padding: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    margin-left: auto;
+    margin-left: auto;
+    
+    width: 100%;
+
+}
+
+.playFilme{
+    margin: 0 0 10px 0 ;
+}
+
+.playFilme:hover{
+    background-color: rgb(18, 214, 18);
+}
+
+.posterFilmeModal{
+    width: 10rem;
+    margin: 0 0 0 10px;
+}
+
+.containerModal p{
+    margin: 10px 10px 25px 30px;
+}
+
+
+.container_filme{
+    display: flex;
+}
+
+
+
+.videoOpenedModal{
+    width: 600px; 
+    height:300px; 
+    
+}
+
+.videoOpenedModal1{
+    align-items: center;
+    width: 1000px; 
+    height:300px;
+}
+
+.playVideoDestaque1{
+    background-color: white;
+    
+}
+
+
+.linhaFecharFilme{
+    display: flex;
+    /* position: fixed; */
+    justify-content: end;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.fecharModar:hover{
+    color: red;
+}
+
+
+.fecharModar{
+    vertical-align: top; 
+    width: 1.5rem;
+    margin: 10px;
+    cursor: pointer;   
+}
 

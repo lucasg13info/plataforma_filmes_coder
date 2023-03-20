@@ -39,41 +39,64 @@
 
     <!-- CONTEUDO PRINCIPAL -->
     
+    
     <main>
         <div class="destaque">
             <div class="imagem-container">
             <div class="texto-esquera">
                 <h1>Prometheus</h1>
                 <p>Este prelúdio do filme Alien conta a história de uma equipe de cientistas que embarca em uma jornada espacial para descobrir a verdade sobre a origem da raça humana. No planeta de destino, eles encontram criaturas poderosas e revelações assustadoras.</p>
+                <button id="btnPlayFilmeDestaque1" class="PlayFilmeDestaque">Play</button>
                 <!-- <button></button> -->
-                <div class="botaoPlay">
+                <div id="openVideo1"></div>
+                <!-- <div class="botaoPlay">
                     <h3 class="btn_play">Play</h3>
-                </div>
+                    
+                    
+                </div> -->
             </div>
         </div>
         </div>
       
-        
+     
         
         
         
         <!-- Modal -->
-        <dialog >
-          <h2>Teste modal</h2>
-          <h2>Filmes em alta</h2>
+        <dialog class="containerModal">
+          <div class="linhaFecharFilme">
+            <div id="fecharModal" class="fecharModar" src="./img/close.png" alt="Fechar Pagina"> X</div>
+
+          </div>
+          <h2 class="nomeFilmeModal">Nome do filme</h2>
+
+          <div class="container_filme">
+            <img  class="posterFilmeModal"src="./img/filmes/aquaman.png" alt="">
+            <div>
+              <p><strong>Duração: </strong></p>
+              <p><strong>Autor: </strong></p>
+              <p><strong>Gênero: </strong></p>
+              <p><strong>Lançamento: </strong></p>
+            </div>
+            
+          </div>
+          <p><strong>SINOPSE: </strong></p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa commodi accusantium, laboriosam unde quaerat omnis fugiat dicta dolores in dolorum, blanditiis cumque cupiditate inventore doloremque, debitis ratione reprehenderit soluta illo?</p>
-          <button id="fecharModal">Close Modal</button>
+          
+          <div id="openVideo"></div>
+          <!-- <img src="./src/video/" alt="">        -->
+          <button id="playFilme" class="playFilme"  onclick= playFilmeModal()> PLAY</button>
         </dialog>
 
-
-        <div class="mid"></div>
-
-
-
-
-
+        
+       
   
         <!-- FILMES ALTA -->
+        <div idclass="app_filmes_de_acao">
+          <h2 class="titulo_categoria">Filmes em alta</h2>
+          <section id="filmesEmAlta" class="filmes">
+        </div>
+
 
         <!-- FILMES DE AÇÃO -->
           <div idclass="app_filmes_de_acao">
@@ -95,31 +118,6 @@
             <h2 class="titulo_categoria">Kids</h2>
             <section id="filmesKids" class="filmes">
           </div>   
-
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <!-- <div id= "fila"> </div> -->
     </main>
