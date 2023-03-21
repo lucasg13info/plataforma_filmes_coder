@@ -5,6 +5,7 @@ function openModal22(mn){
         return
 
         modal.style.display = 'Block';
+        document.body.style.overflow = 'hidden'
 }
 
 function closeModal2(mn){
