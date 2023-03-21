@@ -400,8 +400,8 @@ filmes
 
 .modal-content{
     margin: 0 auto;
-    margin-top: 6%;
-    max-width: 900px;
+    margin-top: 1%;
+    max-width: 50rem;
     background-color: #eee;
     padding: 10px;
     color: #141414;
@@ -421,7 +421,7 @@ filmes
 
 .videoOpenedModal2{
     width: 600px; 
-    height:300px; 
+    height:200px; 
     
 }
 
@@ -458,7 +458,7 @@ filmes
 }
 
 .filmePrometheus{
-    width: 200px;
+    width: 150px;
 }
 
 .filmeETexto{
