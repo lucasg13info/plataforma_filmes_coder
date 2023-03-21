@@ -14,4 +14,5 @@ function closeModal2(mn){
         return
 
         modal.style.display = 'none';
+        location.reload();
 }
