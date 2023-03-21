@@ -195,21 +195,21 @@ let filmes = [
         const filtroFilmesAcao = filmes.filter((filmes)=>{
             return filmes.genero === "Ação"
         })
-        console.log(filtroFilmesAcao)
+        //console.log(filtroFilmesAcao)
 
     
     // Filtro filmes de brasileiros Lucas:
         const filtroFilmesBrasileiros = filmes.filter((filmes)=>{
             return filmes.genero === "brasileiro"
         })
-        console.log(filtroFilmesBrasileiros)
+        //console.log(filtroFilmesBrasileiros)
 
 
     // Filtro filmes de kids Lucas:
         const filtroFilmesKids = filmes.filter((filmes)=>{
             return filmes.genero === "Kids"
         })
-        console.log(filtroFilmesKids)
+        //console.log(filtroFilmesKids)
 
 
     // Filtro filmes de filmes em alta:
@@ -222,7 +222,7 @@ let filmes = [
                    filmes.nomeFilme === "As crônicas de Narnia"
 
         })
-        console.log(filtroFilmesEmALta)    
+        //console.log(filtroFilmesEmALta)    
 
 
 
@@ -231,8 +231,7 @@ let filmes = [
         // Exibindo listagem de filmes em alta:
         for (let filme of filtroFilmesEmALta){
             let caixa = document.getElementById("filmesEmAlta")
-            caixa.innerHTML += 
-        `
+            caixa.innerHTML += `
             <div class="filme">
                 <img id="abrirModal"onClick = selectFilmesModal() src="${filme.capa}" alt="" class="poster" />
                 <div class="nome_filme">${filme.nomeFilme}</div>
@@ -244,14 +243,13 @@ let filmes = [
                   Jack is a young boy of 5 anos old who has lived all his life in one room. He believes everything within it are the only real things in the world. But what will happen when his Ma suddenly tells him that there are other things outside of Room?
                 </div>
               </div>
-        `
+                    `
         }
 
     // Exibindo listagem de filmes de ação:
     for (let filme of filtroFilmesAcao){
         let caixa = document.getElementById("filmeAcao")
-        caixa.innerHTML += 
-    `
+        caixa.innerHTML += `
         <div class="filme">
             <img id="abrirModal"onClick = selectFilmesModal() src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
@@ -263,15 +261,14 @@ let filmes = [
               Jack is a young boy of 5 anos old who has lived all his life in one room. He believes everything within it are the only real things in the world. But what will happen when his Ma suddenly tells him that there are other things outside of Room?
             </div>
           </div>
-    `
+                 `
     }
 
 
     // Exibindo listagem de filmes brasileiros:
     for (let filme of filtroFilmesBrasileiros){
         let caixa = document.getElementById("filmesBrasileiros")
-        caixa.innerHTML += 
-    `
+        caixa.innerHTML += `
         <div class="filme">
             <img src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
@@ -285,15 +282,14 @@ let filmes = [
               Jack is a young boy of 5 anos old who has lived all his life in one room. He believes everything within it are the only real things in the world. But what will happen when his Ma suddenly tells him that there are other things outside of Room?
             </div>
           </div>
-    `
+                `
    }
 
 
     // Exibindo listagem de filmes kids:
     for (let filme of filtroFilmesKids){
         let caixa = document.getElementById("filmesKids")
-        caixa.innerHTML += 
-    `
+        caixa.innerHTML += `
         <div class="filme">
             <img src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
@@ -305,14 +301,10 @@ let filmes = [
             Jack is a young boy of 5 anos old who has lived all his life in one room. He believes everything within it are the only real things in the world. But what will happen when his Ma suddenly tells him that there are other things outside of Room?
             </div>
         </div>
-    `
+                 `
     }
 
-
-    //PLAY FILME:
-    // const playFilme = document.getElementById("playFilme")
-    // const caminhoVideo = "../video/Introducao.mp4"
-    
+   
     let player = document.getElementById("myVid"),
         play = document.getElementById("playFilme");
       
@@ -329,14 +321,8 @@ let filmes = [
 
 
 
-
-
-
-
-
     //PLAY FILME DESTAQUE:
-    document.getElementById('btnPlayFilmeDestaque1').onclick = function () {
-            
+    document.getElementById('btnPlayFilmeDestaque1').onclick = function playFilmeDesque() {            
     let = play1 = document.getElementById("btnPlayFilmeDestaque1");
         play1.innerHTML = `
             <div class="playVideoDestaque1">
