@@ -378,3 +378,42 @@ filmes
     cursor: pointer;   
 }
 
+
+
+
+/* MODAL CONTEUDO PRINCIPAL */
+.modal{
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.modal-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.modal-content{
+    margin: 0 auto;
+    margin-top: 8%;
+    max-width: 900px;
+    background-color: #eee;
+    padding: 10px;
+    color: #141414;
+    box-shadow: 0 0 2px #fff;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    padding: 10px;
+}
+
+.videoOpenedModal2{
+    width: 600px; 
+    height:300px; 
+    
+}
