@@ -1,5 +1,7 @@
-function openModal22(mn){
+function openModal22(mn, e){
     let modal = document.getElementById(mn);
+
+    console.log(e)
 
     if(typeof modal === 'undefined' || modal === null)
         return
@@ -9,6 +11,7 @@ function openModal22(mn){
 }
 
 function closeModal2(mn){
+    console.log(mn)
     let modal = document.getElementById(mn);
 
     if(typeof modal === 'undefined' || modal === null)

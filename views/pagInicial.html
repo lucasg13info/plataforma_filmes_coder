@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="../img/Logo.png" />
+    <title>JS-Flix</title>
+    
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#"><img src="../img/Logo.png" alt="Logo" class="header__logo"></a>
+        </div>
+  
+        <div>
+            <ul>
+                <li class="item_lista"><a href="#">Início</a></li>
+                <!-- <li><a href="#">|</a></li> -->
+                <li class="item_lista"><a href="#">Séries</a></li>
+                <!-- <li><a href="#">|</a></li> -->
+                <li class="item_lista"><a href="#">Filmes</a></li>
+                <!-- <li><a href="#">|</a></li> -->
+                <li class="item_lista"><a href="#">Minha lista</a></li>
+            </ul>
+        </div>
+
+
+        <div id="divBusca">
+            <input type="text" id="txtBuscaFilme" placeholder="Buscar filme"/>
+            <img src="../img/pesquisar.png" id="btnBuscaFilme" alt="Buscar filme"/>
+        </div>
+    </header>
+    
+
+
+    <!-- CONTEUDO PRINCIPAL -->
+    
+    
+    <main>
+        <div class="destaque">
+            <div class="imagem-container">
+            <div class="texto-esquera">
+                <h1>Prometheus</h1>
+                <p>Este prelúdio do filme Alien conta a história de uma equipe de cientistas que embarca em uma jornada espacial para descobrir a verdade sobre a origem da raça humana. No planeta de destino, eles encontram criaturas poderosas e revelações assustadoras.</p>
+                <button onclick="openModal22('dv-modal')" class="PlayFilmeDestaque">Play</button>
+                <!-- <button></button> -->
+                <!-- <button class="btn" onclick="openModal('dv-modal')" >Abrir modal</button> -->
+                <!-- <div class="botaoPlay">
+                    <h3 class="btn_play">Play</h3>
+                    
+                    
+                </div> -->
+            </div>
+        </div>
+        </div>
+      
+     
+        
+        
+        
+        <!-- Modal -->
+        <dialog class="containerModal">
+          <div class="linhaFecharFilme">
+            <div id="fecharModal" class="fecharModar" src="../img/close.png"
+             alt="Fechar Pagina"> X</div>
+
+          </div>
+          <h2 class="nomeFilmeModal">Nome do filme</h2>
+
+          <div class="container_filme">
+            <img  class="posterFilmeModal"src="../img/filmes/aquaman.png" alt="">
+            <div>
+              <p><strong>Duração: </strong></p>
+              <p><strong>Autor: </strong></p>
+              <p><strong>Gênero: </strong></p>
+              <p><strong>Lançamento: </strong></p>
+            </div>
+            
+          </div>
+          <p><strong>SINOPSE: </strong></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa commodi accusantium, laboriosam unde quaerat omnis fugiat dicta dolores in dolorum, blanditiis cumque cupiditate inventore doloremque, debitis ratione reprehenderit soluta illo?</p>
+          
+          <div id="openVideo"></div>
+          <!-- <img src="./src/video/" alt="">        -->
+          <button id="playFilme" class="playFilme"  onclick= playFilmeModal()> PLAY</button>
+        </dialog>
+
+
+        <!-- Modal2 -->
+        <div id="dv-modal" class="modal">
+          <div class="modal-content">
+            <div class="fecharModalLine">
+              <div onclick="closeModal2('dv-modal')" class="fecharModaal2">X</div>
+            </div>
+            
+            <div class="modal-header">Prometheus</div>
+            
+            <div class="filmeETexto">
+              <img class="filmePrometheus" src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/89/69/24/20125709.jpg" alt="">
+              <div class="modal-body">2089. Elizabeth Shaw (Noomi Rapace) e Charlie Holloway (Logan Marshall-Green) são exploradores que encontram a mesma pintura em várias cavernas na Terra. Com base nisto, eles desenvolvem uma teoria em que a pintura aponta para um lugar específico do universo, que teria alguma relação com o início da vida no planeta.</div>
+            
+            </div>
+            
+            <div class="videoPrincipal">
+              <video id="myVid1" class="videoOpenedModal2" fullscreen="true" controls="controls">
+                <source src="../src/video/coder.mp4" type="video/mp4">
+                Sorry, your browser does not support HTML5 video.
+                </video>
+            </div>
+            
+            <div class="modal-footer">
+              
+              
+            </div>
+          </div>
+
+        </div>
+  
+        <!-- FILMES ALTA -->
+        <div idclass="app_filmes_de_acao">
+          <h2 class="titulo_categoria">Filmes em alta</h2>
+          <section id="filmesEmAlta" class="filmes">
+        </div>
+
+
+        <!-- FILMES DE AÇÃO -->
+          <div idclass="app_filmes_de_acao">
+            <h2 class="titulo_categoria">Ação</h2>
+            <section id="filmeAcao" class="filmes">
+          </div>
+          
+
+
+          <!-- FILMES BRASILEIROS -->
+          <div idclass="app_filmes_de_acao">
+            <h2 class="titulo_categoria">Brasileiros</h2>
+            <section id="filmesBrasileiros" class="filmes">
+          </div>    
+
+
+          <!-- FILMES kids -->
+          <div idclass="app_filmes_de_acao">
+            <h2 class="titulo_categoria">Kids</h2>
+            <section id="filmesKids" class="filmes">
+          </div>   
+
+          <!-- <div id= "fila"> </div> -->
+    </main>
+
+
+    <!-- <ul id="lista" class="listaTeste">
+        <p>teste</p>
+    </ul> -->
+
+    <!-- <div id="fil"></div> -->
+    <footer></footer>
+
+    <script src="../src/main.js"></script>
+    <script src="../src/modal.js"></script>
+    <script src="../src/modal_filme_principal.js"></script>
+</body>
+
+</html>

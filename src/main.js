@@ -191,7 +191,12 @@ let filmes = [
 
 ]
 
-    // Filtro filmes de ação Lucas:
+
+    // let filesssss = filmes.JSON()
+    // console.log(filesssss)
+
+
+// Filtro filmes de ação Lucas:
         const filtroFilmesAcao = filmes.filter((filmes)=>{
             return filmes.genero === "Ação"
         })
@@ -222,29 +227,35 @@ let filmes = [
                    filmes.nomeFilme === "As crônicas de Narnia"
 
         })
-        //console.log(filtroFilmesEmALta)    
+        console.log(filtroFilmesEmALta)    
 
 
 
 
 
-        // Exibindo listagem de filmes em alta:
-        for (let filme of filtroFilmesEmALta){
-            let caixa = document.getElementById("filmesEmAlta")
-            caixa.innerHTML += `
-            <div class="filme">
-                <img id="abrirModal"onClick = selectFilmesModal() src="${filme.capa}" alt="" class="poster" />
-                <div class="nome_filme">${filme.nomeFilme}</div>
-                <div class="info">
-                  <span class="duracao">117 min</span>
-                  <span class="ano">2015</span>
-                </div>
-                <div class="desc">
-                  Jack is a young boy of 5 anos old who has lived all his life in one room. He believes everything within it are the only real things in the world. But what will happen when his Ma suddenly tells him that there are other things outside of Room?
-                </div>
-              </div>
-                    `
-        }
+    // Exibindo listagem de filmes em alta:
+    for (let filme of filtroFilmesEmALta){
+        let caixa = document.getElementById("filmesEmAlta")
+        caixa.innerHTML += `
+        <div class="filme">
+            <img id="abrirModal"  src="${filme.capa}" alt="" class="poster" />
+            <div class="nome_filme">${filme.nomeFilme}</div>
+            <div class="info">
+              <span class="duracao">117 min</span>
+              <span class="ano">2015</span>
+            </div>
+            <div class="desc">
+              Jack is a young boy of 5 anos old who has lived all his life in one room. He believes everything within it are the only real things in the world. But what will happen when his Ma suddenly tells him that there are other things outside of Room?
+            </div>
+          </div>
+                `
+    }
+
+    function selectFilmesModal(e){
+        console.log(e)
+    }
+
+
 
     // Exibindo listagem de filmes de ação:
     for (let filme of filtroFilmesAcao){
@@ -313,7 +324,7 @@ let filmes = [
         let caixa = document.getElementById("openVideo")
         caixa.innerHTML = `
             <video id="myVid" class="videoOpenedModal" fullscreen="true" controls="controls" autoplay="autoplay">
-            <source src="./src/video/coder.mp4" type="video/mp4">
+            <source src="../src/video/coder.mp4" type="video/mp4">
                 Sorry, your browser does not support HTML5 video.
             </video>
             `        
