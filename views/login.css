@@ -77,13 +77,13 @@ html {
   }
   
   .login-box a:hover {
-    background: #FFD700;
-    color: #A020F0;
+    background: #ff1101;
+    color: #f5f5f5;
     border-radius: 5px;
-    box-shadow: 0 0 5px #FFD700,
-                0 0 25px #FFD700,
-                0 0 50px #FFD700,
-                0 0 100px #FFD700;
+    box-shadow: 0 0 5px #ff1101,
+                0 0 25px #ff1101,
+                0 0 50px #ff1101,
+                0 0 100px #ff1101;
   }
   
   .login-box a span {
@@ -168,7 +168,3 @@ html {
 
 
 
-
-.container_cria_user_acessa{
-    display: flex;
-}
