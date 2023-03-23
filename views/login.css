@@ -31,6 +31,14 @@ html {
   .login-box .user-box {
     position: relative;
   }
+
+  .logo-login{
+    width: 5rem;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+
+  }
   
   .login-box .user-box input {
     width: 100%;

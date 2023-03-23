@@ -6,7 +6,6 @@ const fecharModal = document.querySelector("#fecharModal")
 btn.onclick = function(e){
     console.log(e)
     modal.showModal()
-    
 }
 
 

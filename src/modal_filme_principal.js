@@ -1,6 +1,5 @@
 function openModal22(mn, e){
     let modal = document.getElementById(mn);
-
     console.log(e)
 
     if(typeof modal === 'undefined' || modal === null)

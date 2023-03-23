@@ -23,20 +23,9 @@ function logar(){
         alert("Dados de login incorretos")
         return
     }else{
-        window.location.href = '../views/pagInicial.html'
-
-        
+        window.location.href = '../views/pagInicial.html'    
     }
     
-
-   
-
-
-
-                //  document.getElementById('userLogado').innerHTML = 
-                // `<p>${nome}</p>`.join('')   
-    
-     
 }
 
 

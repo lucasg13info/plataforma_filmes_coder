@@ -192,11 +192,8 @@ let filmes = [
 ]
 
 
-    // let filesssss = filmes.JSON()
-    // console.log(filesssss)
 
-
-// Filtro filmes de ação Lucas:
+    // Filtro filmes de ação Lucas:
         const filtroFilmesAcao = filmes.filter((filmes)=>{
             return filmes.genero === "Ação"
         })
@@ -228,7 +225,6 @@ let filmes = [
 
         })
         console.log(filtroFilmesEmALta)    
-
 
 
 
@@ -327,12 +323,13 @@ let filmes = [
 
 
     let userLogado1 = document.getElementById("userLogado")
-    userLogado1.innerHTML += `
-                <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${username_newUser}</p>
-                `
+        userLogado1.innerHTML += `
+            <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${username_newUser}</p>
+        `
 
     
    
+    //PLAY VIDEO MODAL LISTA FILMES
     let player = document.getElementById("myVid"),
         play = document.getElementById("playFilme");
       
@@ -360,7 +357,6 @@ let filmes = [
                 <source src="./src/video/coder.mp4" type="video/mp4">
                 Sorry, your browser does not support HTML5 video.
                 </video>
-
             </div>
             `        
         }
@@ -409,11 +405,3 @@ let filmes = [
     // let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
     // document.getElementById('lista').innerHTML = 
     // lista.map(item=>`<p>${item}</p>`).join('')       
-
-
-
-    
-      // let userLogado = document.getElementById("userLogado")
-    // userLogado.innerHTML += `
-    //         <p class="bem_vindo_user">"Seja bem-vindo:" ${username_newUser}</p>
-    //        

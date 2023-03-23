@@ -53,6 +53,13 @@ html {
     pointer-events: none;
     transition: .5s;
   }
+  .logo-login{
+    width: 5rem;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+
+  }
   
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
@@ -72,7 +79,7 @@ html {
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 40px;
+    margin-top: 5px;
     letter-spacing: 4px
   }
   
