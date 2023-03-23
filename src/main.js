@@ -315,6 +315,23 @@ let filmes = [
                  `
     }
 
+     
+    //USUÁRIO LOGADO:
+    //Consultando o que está dentro do local storage com nome "usuario":
+    const string = localStorage.getItem("usuario")
+    const usuarioCadastrado = JSON.parse(string)
+
+    //Mostrando no terminal o que está cadastrado no localStorage:
+    console.log(usuarioCadastrado)
+    const {username_newUser, password_newUser} = usuarioCadastrado;
+
+
+    let userLogado1 = document.getElementById("userLogado")
+    userLogado1.innerHTML += `
+                <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${username_newUser}</p>
+                `
+
+    
    
     let player = document.getElementById("myVid"),
         play = document.getElementById("playFilme");
@@ -392,3 +409,11 @@ let filmes = [
     // let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
     // document.getElementById('lista').innerHTML = 
     // lista.map(item=>`<p>${item}</p>`).join('')       
+
+
+
+    
+      // let userLogado = document.getElementById("userLogado")
+    // userLogado.innerHTML += `
+    //         <p class="bem_vindo_user">"Seja bem-vindo:" ${username_newUser}</p>
+    //        
