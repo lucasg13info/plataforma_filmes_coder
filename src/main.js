@@ -324,7 +324,7 @@ let filmes = [
 
     let userLogado1 = document.getElementById("userLogado")
         userLogado1.innerHTML += `
-            <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${username_newUser}</p>
+            <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${username_newUser.toUpperCase()}</p>
         `
 
     
