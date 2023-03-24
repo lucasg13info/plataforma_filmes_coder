@@ -19,13 +19,14 @@ function logar(){
     console.log(dadosCorretos)
 
     //Se dados digitados não forem iguais ao que está no local storage aparece a mensagem de dados incorretos: senão realiza o redirecionamento para a página correta.
-    if(!dadosCorretos){
-        alert("Dados de login incorretos")
-        return
-    }else{
-        window.location.href = '../views/pagInicial.html'    
-    }
+    // if(!dadosCorretos){
+    //     alert("Dados de login incorretos")
+    // }else{
+    //     window.location.href = '../views/pagInicial.html'    
+    // }
     
+    //if ternário:
+    !dadosCorretos ? alert("Dados de login incorretos!") : window.location.href = '../views/pagInicial.html'
 }
 
 

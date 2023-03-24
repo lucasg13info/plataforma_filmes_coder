@@ -319,13 +319,15 @@ let filmes = [
 
     //Mostrando no terminal o que está cadastrado no localStorage:
     console.log(usuarioCadastrado)
-    const {username_newUser, password_newUser} = usuarioCadastrado;
+    // const {username_newUser, password_newUser} = usuarioCadastrado;
 
+
+    let nomeTela = usuarioCadastrado?.username_newUser || "Sem usuário"
 
     let userLogado1 = document.getElementById("userLogado")
-        userLogado1.innerHTML += `
-            <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${username_newUser.toUpperCase()}</p>
-        `
+        userLogado1.innerHTML += (`
+            <p class="bem_vindo_user"><strong>Seja bem-vindo:</strong> ${nomeTela.toUpperCase()}</p>
+        ` )
 
     
    
