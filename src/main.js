@@ -322,7 +322,7 @@ let filmes = [
 
 
     //PLAY FILME DESTAQUE:
-    document.getElementById('btnPlayFilmeDestaque1').onclick = function playFilmeDesque() {            
+    /* document.getElementById('btnPlayFilmeDestaque1').onclick = function playFilmeDesque() {            
     let = play1 = document.getElementById("btnPlayFilmeDestaque1");
         play1.innerHTML = `
             <div class="playVideoDestaque1">
@@ -341,13 +341,8 @@ let filmes = [
         document.getElementById("fecharVideo").onclick = function(){
             console.log("CLICK OK")
             stopVideo()
-        }
+        } */
 
-
-        
-
-    // let procurarFilme = prompt("Digite aqui o filme que vc deseja procurar");
-    // pesquisarFilme(procurarFilme);
 
     
     
@@ -360,15 +355,38 @@ let filmes = [
 
     }
 
+    let acharFilmes = document.querySelector("#txtBuscaFilme");
+
+    acharFilmes.addEventListener("change", function() {
+        pesquisarFilme(acharFilmes.value);
+    })
+
     function pesquisarFilme(){
-        let acharFilmes = filmes.find ((filme) => {
-            return filme.nomeFilme === procurarFilme;
+        let filmeEncontrado = filmes.find ((filme) => {
+            return filme.nomeFilme === acharFilmes.value ;
         })
 
-        if(acharFilmes){
-            alert(`Filme ${procurarFilme} encontrado`);
+        if(filmeEncontrado){
+            const posterFilmePesquisado = document.querySelector("#posterFilmePesquisado");
+
+            posterFilmePesquisado.setAttribute("class","formatacaoPoster");
+
+            posterFilmePesquisado.innerHTML = `<img id="capaAjuste" src=${filmeEncontrado.capa} alt=${filmeEncontrado.nomeFilme}>`
+
+            const dadosFilmePesquisado = document.querySelector("#dadosFilmePesquisado");
+
+            dadosFilmePesquisado.innerHTML = `<h1 class="estiloDescrição_nomeFilme">Nome do Filme: ${filmeEncontrado.nomeFilme}</h1>
+            <h2 class= "estiloDescrição">Genero: ${filmeEncontrado.genero}</h2>
+            <h2 class= "estiloDescrição">Duração: ${filmeEncontrado.duracao}</h2>
+            <h2 class= "estiloDescrição">Sinopse: ${filmeEncontrado.sinopse}</h2>
+            <h2 class= "estiloDescrição">Lançamento: ${filmeEncontrado.lancamento}</h2>`
+        
+        } else if (filmeEncontrado != Object) {
+            const demostrativoBusca = document.querySelector("#demostrativoBusca");
+            demostrativoBusca.setAttribute("class","background");
+            demostrativoBusca.innerHTML = `<h1 id="buscaErro">Filme não encontrado 😒</h1>`
         } else {
-            alert("Filme não encontrado");
+            
         }
     }
 

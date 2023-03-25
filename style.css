@@ -9,7 +9,8 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 0.2rem;
+    align-items: center;
+    padding: 5px;
     background-color: #141414;
     border-bottom: 5px solid #8B0D32;
 }
@@ -20,38 +21,144 @@ header{
     margin: 1rem 0 0 1rem;
 }
 
-header li{
-    display: inline;
-    /* border-bottom:3px solid #EDEDED;  */
-    font-weight: bold;
+.menu ul {
+    list-style-type: none;
+    padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    position: relative;
+    font-size: 22px;
 }
 
-
-header ul li a {
-    font-size: 1.5rem;
-    color: white;
-    padding: 1rem;
+.menu ul li {
     display: inline-block;
+}
+
+.menu ul li a {
     text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.7s;
+}
+
+.menu ul li a:hover {
+    background-color: #8B0D32;
+    padding: 15px;
+    border-radius: 90px;
+    font-size: 20px;
+}
+
+.menu ul ul {
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover ul {
+    display: block;
+    width: 100px;
+    margin-top: 15px;
+}
+
+.menu ul ul li a {
+    display: block;
+    background-color: #272424;
+    width: 100px;
+    border-radius: 90px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.menu ul ul li a:hover {
+    background-color: #8B0D32;
+    border-radius: 90px;
+}
+
+.search-box {
+    background-color: #8B0D32;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    color: #390616;
+    padding: 0;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+    color: #390616;
+    font-weight: bold;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8B0D32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.5s;
 }
 
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
 
-header li a:hover { 
-    /* background-color:#D6D6D6; */
-    background-color: #8B0D32;
+.search-box:hover > .search-btn {
+    background-color: white;
+}
+
+#demostrativoBusca {
+    display: flex;
+    justify-content:space-around;
+}
+
+#posterFilmePesquisado {
+    background-color: #141414;
+    
+}
+
+.formatacaoPoster {
     padding: 10px;
-    border-radius: 90px;
-    color:white;
-    font-size: 1.7rem;
 }
 
-
-.btn_play:hover{
-    background-color: rgb(13, 181, 91);
+#dadosFilmePesquisado {
+    width: 75%;
+    background-color: #8B0D32;
 }
 
+.estiloDescrição_nomeFilme {
+    color: #fff;
+    margin-left: 15px;
+}
+
+.estiloDescrição {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 19px;
+}
+
+#buscaErro {
+    color: white;
+}
+
+.background {
+    background-color: #8B0D32;
+}
 
 input:placeholder-shown {
     border-color: white;
@@ -62,18 +169,6 @@ input:placeholder-shown {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-#txtBuscaFilme {
-    height: 27px;
-    width: 250px;
-    border-radius: 20px;
-    border: 2px solid white;
-    font-size: 15px;
-    background: transparent;
-    color: #8B0D32;
-    padding-left: 10px;
 }
 
 

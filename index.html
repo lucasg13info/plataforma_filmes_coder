@@ -16,24 +16,44 @@
             <img src="./img/Logo.png" alt="Logo" class="header__logo">
         </div>
   
-        <div>
+        <div class="menu">
             <ul>
-                <li class="item_lista"><a href="#">Início</a></li>
+                <li class="item_lista"><a href="#" class="lista">Início</a></li>
                 <!-- <li><a href="#">|</a></li> -->
-                <li class="item_lista"><a href="#">Séries</a></li>
+                <li class="item_lista"><a href="#" class="lista">Séries</a></li>
                 <!-- <li><a href="#">|</a></li> -->
-                <li class="item_lista"><a href="#">Filmes</a></li>
+                <li class="item_lista"><a href="#" class="lista">Filmes</a></li>
+
+                <li class="item_lista"><a href="#" class="lista">Gênero</a>
+                  <ul>
+                    <li><a href="#alta">Alta</a></li>
+                    <li><a href="#acao">Ação</a></li>
+                    <li><a href="#brasileiros">Brasileiros</a></li>
+                    <li><a href="#kids">Kids</a></li>
+                  </ul>
+                </li>
                 <!-- <li><a href="#">|</a></li> -->
-                <li class="item_lista"><a href="#">Minha lista</a></li>
+                <li class="item_lista"><a href="#" class="lista">Minha lista</a></li>
             </ul>
         </div>
 
 
-        <div id="divBusca">
+       <!--  <div id="divBusca">
             <input type="text" id="txtBuscaFilme" placeholder="Buscar filme"/>
-            <img src="./img/pesquisar.png" id="btnBuscaFilme" alt="Buscar filme"/>
+            <button class="btn"><img src="./img/pesquisar.png" id="btnBuscaFilme" alt="Buscar filme"/></button>
+        </div> -->
+        <div class="search-box">
+          <input type="text" class="search-txt" placeholder="Pesquisar" id="txtBuscaFilme">
+          <a href="#" class="search-btn">
+            <img src="./img/lupa_pesquisa.svg" alt="Lupa" height="40" width="40">
+          </a>
         </div>
     </header>
+
+    <div id="demostrativoBusca">
+      <div id="posterFilmePesquisado"></div>
+      <div id="dadosFilmePesquisado"></div>
+    </div>
     
 
 
@@ -120,14 +140,14 @@
         </div>
   
         <!-- FILMES ALTA -->
-        <div idclass="app_filmes_de_acao">
+        <div idclass="app_filmes_de_acao" id="alta">
           <h2 class="titulo_categoria">Filmes em alta</h2>
           <section id="filmesEmAlta" class="filmes">
         </div>
 
 
         <!-- FILMES DE AÇÃO -->
-          <div idclass="app_filmes_de_acao">
+          <div idclass="app_filmes_de_acao" id="acao">
             <h2 class="titulo_categoria">Ação</h2>
             <section id="filmeAcao" class="filmes">
           </div>
@@ -135,14 +155,14 @@
 
 
           <!-- FILMES BRASILEIROS -->
-          <div idclass="app_filmes_de_acao">
+          <div idclass="app_filmes_de_acao" id="brasileiros">
             <h2 class="titulo_categoria">Brasileiros</h2>
             <section id="filmesBrasileiros" class="filmes">
           </div>    
 
 
           <!-- FILMES kids -->
-          <div idclass="app_filmes_de_acao">
+          <div idclass="app_filmes_de_acao" id="kids">
             <h2 class="titulo_categoria">Kids</h2>
             <section id="filmesKids" class="filmes">
           </div>   
