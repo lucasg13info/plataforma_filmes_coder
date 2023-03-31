@@ -328,6 +328,7 @@ function listaFavoritos() {}
 function retirarFilmeFavoritos() {}
 
 let acharFilmes = document.querySelector("#txtBuscaFilme");
+const loading = document.querySelector("#loading");
 
 acharFilmes.addEventListener("change", function () {
   pesquisarFilme(acharFilmes.value);
@@ -339,32 +340,35 @@ function pesquisarFilme() {
   });
 
   if (filmeEncontrado) {
-    const posterFilmePesquisado = document.querySelector(
-      "#posterFilmePesquisado"
-    );
+    loading.removeAttribute("class", "display_none");
 
-    posterFilmePesquisado.setAttribute("class", "formatacaoPoster");
+    setTimeout(() => {
+      loading.setAttribute("class", "display_none");
+      const posterFilmePesquisado = document.querySelector("#posterFilmePesquisado");
 
-    posterFilmePesquisado.innerHTML = `<img id="capaAjuste" src=${filmeEncontrado.capa} alt=${filmeEncontrado.nomeFilme}>`;
+      posterFilmePesquisado.setAttribute("class", "formatacaoPoster");
 
-    const dadosFilmePesquisado = document.querySelector(
-      "#dadosFilmePesquisado"
-    );
+      posterFilmePesquisado.innerHTML = `<img id="capaAjuste" src=${filmeEncontrado.capa} alt=${filmeEncontrado.nomeFilme}>`;
 
-    dadosFilmePesquisado.innerHTML = `<h1 class="estiloDescrição_nomeFilme">Nome do Filme: ${filmeEncontrado.nomeFilme}</h1>
+      const dadosFilmePesquisado = document.querySelector("#dadosFilmePesquisado");
+
+      dadosFilmePesquisado.innerHTML = `<h1 class="estiloDescrição_nomeFilme">Nome do Filme: ${filmeEncontrado.nomeFilme}</h1>
             <h2 class= "estiloDescrição">Genero: ${filmeEncontrado.genero}</h2>
             <h2 class= "estiloDescrição">Duração: ${filmeEncontrado.duracao}</h2>
             <h2 class= "estiloDescrição">Sinopse: ${filmeEncontrado.sinopse}</h2>
             <h2 class= "estiloDescrição">Lançamento: ${filmeEncontrado.lancamento}</h2>`;
+    }, 1500);
   } else if (filmeEncontrado != Object) {
-    swal("Filme não encontrado😒", "Clique no Botão", "error").then(
-      (recarregar) => {
+    loading.removeAttribute("class", "display_none");
+
+    setTimeout(() => {
+      loading.setAttribute("class", "display_none");
+      swal("Filme não encontrado😒", "Clique no Botão", "error").then((recarregar) => {
         if (recarregar) {
           location.reload();
         }
-      }
-    );
-  } else {
+      });
+    }, 1500);
   }
 }
 
@@ -376,10 +380,9 @@ function sugestaoFilmes() {}
 // lista.map(item=>`<p>${item}</p>`).join('')
 
 //PLAY FILME DESTAQUE:
-document.getElementById("btnPlayFilmeDestaque1").onclick =
-  function playFilmeDesque() {
-    let = play1 = document.getElementById("btnPlayFilmeDestaque1");
-    play1.innerHTML = `
+/* document.getElementById("btnPlayFilmeDestaque1").onclick = function playFilmeDesque() {
+  let = play1 = document.getElementById("btnPlayFilmeDestaque1");
+  play1.innerHTML = `
             <div class="playVideoDestaque1">
                 <a href="#"><button id="fecharVideo">X</button></a>
 
@@ -389,10 +392,10 @@ document.getElementById("btnPlayFilmeDestaque1").onclick =
                 </video>
             </div>
             `;
-  };
+};
 
 let video = document.querySelector("#myVid1");
 document.getElementById("fecharVideo").onclick = function () {
   console.log("CLICK OK");
   stopVideo();
-};
+}; */
