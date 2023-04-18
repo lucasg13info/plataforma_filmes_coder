@@ -336,7 +336,7 @@ acharFilmes.addEventListener("change", function () {
 
 function pesquisarFilme() {
   let filmeEncontrado = filmes.find((filme) => {
-    return filme.nomeFilme === acharFilmes.value;
+    return filme.nomeFilme.toLowerCase().includes(acharFilmes.value.toLowerCase());
   });
 
   if (filmeEncontrado) {
