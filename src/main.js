@@ -386,17 +386,17 @@ let filmes = [
 
     }
 
-    function pesquisarFilme(){
-        let acharFilmes = filmes.find ((filme) => {
-            return filme.nomeFilme === procurarFilme;
-        })
+    // function pesquisarFilme(){
+    //     let acharFilmes = filmes.find ((filme) => {
+    //         return filme.nomeFilme === procurarFilme;
+    //     })
 
-        if(acharFilmes){
-            alert(`Filme ${procurarFilme} encontrado`);
-        } else {
-            alert("Filme não encontrado");
-        }
-    }
+    //     if(acharFilmes){
+    //         alert(`Filme ${procurarFilme} encontrado`);
+    //     } else {
+    //         alert("Filme não encontrado");
+    //     }
+    // }
 
     function sugestaoFilmes(){
 
@@ -407,3 +407,43 @@ let filmes = [
     // let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
     // document.getElementById('lista').innerHTML = 
     // lista.map(item=>`<p>${item}</p>`).join('')       
+
+
+
+    function pesquisarFilme() {
+        let filmeEncontrado = filmes.find((filme) => {
+          return filme.nomeFilme.toLowerCase().includes(acharFilmes.value.toLowerCase());
+        });
+      
+        if (filmeEncontrado) {
+          loading.removeAttribute("class", "display_none");
+      
+          setTimeout(() => {
+            loading.setAttribute("class", "display_none");
+            const posterFilmePesquisado = document.querySelector("#posterFilmePesquisado");
+      
+            posterFilmePesquisado.setAttribute("class", "formatacaoPoster");
+      
+            posterFilmePesquisado.innerHTML = `<img id="capaAjuste" src=${filmeEncontrado.capa} alt=${filmeEncontrado.nomeFilme}>`;
+      
+            const dadosFilmePesquisado = document.querySelector("#dadosFilmePesquisado");
+      
+            dadosFilmePesquisado.innerHTML = `<h1 class="estiloDescrição_nomeFilme">Nome do Filme: ${filmeEncontrado.nomeFilme}</h1>
+                  <h2 class= "estiloDescrição">Genero: ${filmeEncontrado.genero}</h2>
+                  <h2 class= "estiloDescrição">Duração: ${filmeEncontrado.duracao}</h2>
+                  <h2 class= "estiloDescrição">Sinopse: ${filmeEncontrado.sinopse}</h2>
+                  <h2 class= "estiloDescrição">Lançamento: ${filmeEncontrado.lancamento}</h2>`;
+          }, 1500);
+        } else if (filmeEncontrado != Object) {
+          loading.removeAttribute("class", "display_none");
+      
+          setTimeout(() => {
+            loading.setAttribute("class", "display_none");
+            swal("Filme não encontrado😒", "Clique no Botão", "error").then((recarregar) => {
+              if (recarregar) {
+                location.reload();
+              }
+            });
+          }, 1500);
+        }
+      }
