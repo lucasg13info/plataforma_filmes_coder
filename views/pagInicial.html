@@ -12,38 +12,47 @@
 </head>
 <body>
     <header>
-        <div>
-            <a href="#"><img src="../img/Logo.png" alt="Logo" class="header__logo"></a>
-        </div>
-  
-        <div>
-            <ul>
-                <li class="item_lista"><a href="#">Início</a></li>
-                <!-- <li><a href="#">|</a></li> -->
-                <li class="item_lista"><a href="#">Séries</a></li>
-                <!-- <li><a href="#">|</a></li> -->
-                <li class="item_lista"><a href="#">Filmes</a></li>
-                <!-- <li><a href="#">|</a></li> -->
-                <li class="item_lista"><a href="#">Minha lista</a></li>
-            </ul>
-        </div>
-        
+      <div>
+        <img src="../img/Logo.png" alt="Logo" class="header__logo">
+    </div>
 
-        <div class="search-box">
-          <input type="text" class="search-txt" placeholder="Pesquisar" id="txtBuscaFilme">
-          <a href="#" class="search-btn">
-            <img src="./img/lupa_pesquisa.svg" alt="Lupa" height="40" width="40">
-          </a>
-        </div>
+    <div class="menu">
+        <ul>
+            <li class="item_lista"><a href="#" class="lista">Início</a></li>
+            <li class="item_lista"><a href="#" class="lista">Séries</a></li>
+            <li class="item_lista"><a href="#" class="lista">Filmes</a></li>
+
+            <li class="item_lista"><a href="#" class="lista">Gênero</a>
+              <ul>
+                <li><a href="#alta">Alta</a></li>
+                <li><a href="#acao">Ação</a></li>
+                <li><a href="#brasileiros">Brasileiros</a></li>
+                <li><a href="#kids">Kids</a></li>
+              </ul>
+            </li>
+            <li class="item_lista"><a href="#" class="lista">Minha lista</a></li>
+        </ul>
+    </div>
 
         <div class="nomeUsereSair"> 
+          <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Pesquisar" id="txtBuscaFilme">
+            <a href="#" class="search-btn">
+              <img src="../img/lupa_pesquisa.svg" alt="Lupa" height="40" width="40">
+            </a>
+          </div>
           <div id="userLogado" class=""></div>
           <a href="../views/login.html"><p class="sair">Sair</p></a>
         </div>
       
     </header>
-    
 
+    <div id="demostrativoBusca">
+      <div id="posterFilmePesquisado"></div>
+      <div id="dadosFilmePesquisado"></div>
+    </div>
+
+    <div id="loading" class="display_none"><div class="display-flex"><div class="lds-facebook"><div></div><div></div><div></div></div></div></div>
 
     <!-- CONTEUDO PRINCIPAL -->  
     <main>
@@ -196,6 +205,7 @@
     <script src="../src/main.js"></script>
     <script src="../src/modal.js"></script>
     <script src="../src/modal_filme_principal.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
