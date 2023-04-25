@@ -439,11 +439,12 @@ filmes
 
   font-size: 2rem;
   font-weight: bold;
+  
 }
 
-.fecharModar:hover {
+/* .fecharModar:hover {
   color: red;
-}
+} */
 
 .fecharModar {
   vertical-align: top;
@@ -451,8 +452,17 @@ filmes
   margin: 10px;
   cursor: pointer;
 }
+#file{
+  background-color: black;
+}
 
+#refresh{
+  color: white;
+}
 
+#refresh:hover{
+  color: red;
+}
 
 /* Abrr video */
 .abrirVideoNovoModelo{

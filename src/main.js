@@ -240,7 +240,7 @@ for (let filme of filtroFilmesEmALta) {
   let caixa = document.getElementById("filmesEmAlta");
   caixa.innerHTML += `
         <div class="filme" >
-            <img id="abrirModal" src="${filme.capa}" alt="" class="poster" />
+            <img onclick="playFilmes()" src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
             <div class="info">
               <span class="duracao">117 min</span>
@@ -290,7 +290,7 @@ for (let filme of filtroFilmesAcao) {
   let caixa = document.getElementById("filmeAcao");
   caixa.innerHTML += `
         <div class="filme">
-            <img id="abrirModal"onClick = selectFilmesModal() src="${filme.capa}" alt="" class="poster" />
+            <img onclick="playFilmes()" src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
             <div class="info">
               <span class="duracao">117 min</span>
@@ -308,7 +308,7 @@ for (let filme of filtroFilmesBrasileiros) {
   let caixa = document.getElementById("filmesBrasileiros");
   caixa.innerHTML += `
         <div class="filme">
-            <img src="${filme.capa}" alt="" class="poster" />
+            <img onclick="playFilmes()" src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
             <div class="info">
               <span class="duracao">117 min</span>
@@ -328,7 +328,7 @@ for (let filme of filtroFilmesKids) {
   let caixa = document.getElementById("filmesKids");
   caixa.innerHTML += `
         <div class="filme">
-            <img src="${filme.capa}" alt="" class="poster" />
+            <img onclick="playFilmes()" src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
             <div class="info">
             <span class="duracao">117 min</span>
