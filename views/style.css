@@ -452,6 +452,25 @@ filmes
   cursor: pointer;
 }
 
+
+
+/* Abrr video */
+.abrirVideoNovoModelo{
+  width: 50%;
+  height: 50%;
+
+  align-items: center;
+  background-color: black;
+}
+
+.sairDoFilme{
+  font-weight: bold;
+  font-size: 20px;
+}
+.sairDoFilme:hover{
+  color: red;
+}
+
 /* MODAL CONTEUDO PRINCIPAL */
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
@@ -663,3 +682,8 @@ filmes
     height: 32px;
   }
 }
+
+
+
+
+

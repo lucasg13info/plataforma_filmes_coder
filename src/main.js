@@ -239,8 +239,8 @@ console.log(filtroFilmesEmALta);
 for (let filme of filtroFilmesEmALta) {
   let caixa = document.getElementById("filmesEmAlta");
   caixa.innerHTML += `
-        <div class="filme">
-            <img id="abrirModal"  src="${filme.capa}" alt="" class="poster" />
+        <div class="filme" >
+            <img id="abrirModal" src="${filme.capa}" alt="" class="poster" />
             <div class="nome_filme">${filme.nomeFilme}</div>
             <div class="info">
               <span class="duracao">117 min</span>
@@ -256,6 +256,34 @@ for (let filme of filtroFilmesEmALta) {
 function selectFilmesModal(e) {
   console.log(e);
 }
+
+
+
+
+function playFilmes(){
+  // console.log("clicou")
+  let file = document.getElementById("file")
+  file.innerHTML = `
+  <p class="sairDoFilme" id="refresh" >SAIR DO FILME</p>
+  
+  <video id="myVid" class="abrirVideoNovoModelo" fullscreen="true" controls="controls" autoplay="autoplay">
+    <source src="../src/video/coder.mp4" type="video/mp4">
+  
+      Sorry, your browser does not support HTML5 video.
+  </video>
+  `;
+
+  let refreshh = document.getElementById("refresh")
+  refreshh.addEventListener("click", function() {
+    
+    location.reload();
+});
+
+}
+
+
+
+
 
 // Exibindo listagem de filmes de ação:
 for (let filme of filtroFilmesAcao) {
@@ -364,24 +392,7 @@ document.getElementById("fecharVideo").onclick = function () {
   stopVideo();
 }; */
 
-//Funcionalidades:
-function listaFavoritos() {}
 
-function retirarFilmeFavoritos() {}
-
-// function pesquisarFilme(){
-//     let acharFilmes = filmes.find ((filme) => {
-//         return filme.nomeFilme === procurarFilme;
-//     })
-
-//     if(acharFilmes){
-//         alert(`Filme ${procurarFilme} encontrado`);
-//     } else {
-//         alert("Filme não encontrado");
-//     }
-// }
-
-function sugestaoFilmes() {}
 
 // Listagem itens Array:
 // let lista = ['Item1', 'Item2', 'Item3', 'Item 4'];
