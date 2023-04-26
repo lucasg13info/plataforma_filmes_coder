@@ -24,7 +24,7 @@ header {
   margin: 1rem 0 0 1rem;
 }
 
-.menu ul {
+.menu_header ul {
   list-style-type: none;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -33,36 +33,36 @@ header {
   font-size: 22px;
 }
 
-.menu ul li {
+.menu_header ul li {
   display: inline-block;
 }
 
-.menu ul li a {
+.menu_header ul li a {
   text-decoration: none;
   color: white;
   padding: 10px;
   transition: 0.7s;
 }
 
-.menu ul li a:hover {
+.menu_header ul li a:hover {
   background-color: #8b0d32;
   padding: 15px;
   border-radius: 90px;
   font-size: 20px;
 }
 
-.menu ul ul {
+.menu_header ul ul {
   display: none;
   position: absolute;
 }
 
-.menu ul li:hover ul {
+.menu_header ul li:hover ul {
   display: block;
   width: 100px;
   margin-top: 15px;
 }
 
-.menu ul ul li a {
+.menu_header ul ul li a {
   display: block;
   background-color: #272424;
   width: 100px;
@@ -71,7 +71,7 @@ header {
   font-size: 15px;
 }
 
-.menu ul ul li a:hover {
+.menu_header ul ul li a:hover {
   background-color: #8b0d32;
   border-radius: 90px;
 }
@@ -573,9 +573,6 @@ filmes
   display: flex;
 }
 
-
-
-
 .display_none {
   display: none;
 }
@@ -625,108 +622,95 @@ filmes
   }
 }
 
-
-
-
 /* FOOTER */
 /* FOOTER */
 
-.footer{
-    
+.footer {
   display: flex;
-  justify-content:space-around;
-  padding:  40px;
+  justify-content: space-around;
+  padding: 40px;
   gap: 30px;
-  background-color:#141414;
+  background-color: #141414;
   color: #eee;
-  padding-top:100px ;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
-
-
+  padding-top: 100px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.devs,.menuFooter,.sugestao{
+.devs,
+.menuFooter,
+.sugestao {
   display: flex;
   width: 33%;
   flex-direction: column;
   padding: 40px;
   gap: 15px;
   text-decoration: none;
-  background-color:#141414;
+  background-color: #141414;
 }
-.menu{
+.menu {
   text-decoration: none;
   color: #eee;
   font-size: 12px;
   padding: 10px;
   transition: 0.7s;
 }
-.menuFooter{
+.menuFooter {
   align-items: end;
   font-size: 12px;
-
 }
-.menu:hover,.desenvolvedores:hover{
+.menu:hover,
+.desenvolvedores:hover {
   background-color: #8b0d32;
   padding: 15px;
   border-radius: 90px;
   font-size: 16px;
- 
 }
-.sugestao{
+.sugestao {
   align-items: center;
 }
 
-
-
-.desenvolvedores, .sobre{
+.desenvolvedores,
+.sobre {
   text-decoration: none;
   color: #eee;
   font-size: 12px;
   transition: 0.7s;
-  
 }
 
-
-.inputSugestao{
+.inputSugestao {
   width: 253px;
   height: 58px;
   font-size: 16px;
   border-radius: 8px;
- 
 }
-#devs{
+#devs {
   font-size: 12px;
 }
-.title{
+.title {
   text-align: center;
   font-size: 12px;
 }
-.enviarSugestao{
+.enviarSugestao {
   width: 61px;
   height: 26px;
   border-radius: 8px;
   border: #eee;
 }
-.copyright{
- text-align: center;
- 
- color: #eee;
- display: flex;
- 
+.copyright {
+  text-align: center;
+
+  color: #eee;
+  display: flex;
 }
-.coder{
+.coder {
   text-decoration: none;
   color: #eee;
 }
-mark{
-  background-color:#8B0D32;
+mark {
+  background-color: #8b0d32;
   border-radius: 5px;
   padding: 1px;
 }
-.logo-linkedin{
+.logo-linkedin {
   width: 100px;
- 
- 
 }
